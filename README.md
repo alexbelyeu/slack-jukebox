@@ -5,6 +5,8 @@ Simply create a Slash Command, such as `/juke`, which accepts a track name (also
 
     /juke Ramble On – Led Zeppelin
     /juke Ramble On
+    
+<img src="screenshots/tapbox_test.gif" alt="GIF of how it works" width="800" height="500">
 
 ## Installation
 
@@ -12,7 +14,7 @@ Simply create a Slash Command, such as `/juke`, which accepts a track name (also
 
 First you'll want to create your Slack Slash Command, which you can do by going to your [Slash Commands page](https://my.slack.com/services/new/bots).
 
-{{Image for Slack}}
+<img src="screenshots/slack_settings.jpg" alt="Slack's settings for Slack command" width="800" height="500">
 
 During setup, have your slash command or outgoing webhook submit a POST to your app's `/store` endpoint, e.g. `https://app-name.herokuapp.com/store`.
 
@@ -27,7 +29,7 @@ If you want to post the song that was recently added, go to [Your Slack's app di
 
 Head over to [Spotify's Developer Site](http://developer.spotify.com) and create a new Application. Make sure you add whatever slackbox's callback URI as a valid callback URI. If you're running locally, this will be `http://localhost:5000/callback` or on Heroku `https://app-name.herokuapp.com/callback`
 
-{{Image for Spotify}}
+<img src="screenshots/spotify_settings.jpg" alt="Spotify's Developer page" width="400" height="400">
 
 Make a note of the `key`, `secret` and `callback URI` too, as you'll need these later as well.
 
@@ -41,7 +43,7 @@ If you create an app on Heroku for free, the app will go to sleep after 30 minut
 
 To create a Firebase database, create an account for free, add project with same name as on Heroku, create a database, and then generate a private key to get your `Firebase service account key` JSON file. You will need this file in the root of your project as it contains the private key to your DB.
 
-{{Image for Firebase}}
+<img src="screenshots/firebase_settings.jpg" alt="Firebase DB settings" width="800" height="400">
 
 #### Cron job
 
