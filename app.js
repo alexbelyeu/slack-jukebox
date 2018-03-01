@@ -184,7 +184,9 @@ app.post('/store', function(req, res) {
     function(err) {
       return slackResponse(
         res,
-        'You were not authorized, authorize here: https://tapbox.herokuapp.com/authorize'
+        `You were not authorized, authorize here: ${
+          process.env.APP_AUTHORIZE_ENDPOINT
+        }`
       );
     }
   );
